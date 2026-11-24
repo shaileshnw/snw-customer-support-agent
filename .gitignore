@@ -1,0 +1,21 @@
+.env
+*.db
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/
+
+%%writefile Procfile
+web: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+
+%%writefile requirements.txt
+langchain
+langchain-openai
+fastapi
+uvicorn
+streamlit
+razorpay
+python-dotenv
+requests
+
+print('✅ Created .gitignore, Procfile, requirements.txt')
